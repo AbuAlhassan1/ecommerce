@@ -17,9 +17,16 @@ class SignupWrapper extends StatefulWidget {
 class _SignupWrapperState extends State<SignupWrapper> {
   @override
   Widget build(BuildContext context) {
+
+    // Variables -- S t a r t --
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+    // Variables -- E n d --
+
     return GestureDetector(
       onTap: () => FocusScope.of(context).requestFocus(FocusNode()),
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         floatingActionButton: FloatingActionButton(
           onPressed: (){
             AdaptiveTheme.of(context).toggleThemeMode();
@@ -71,7 +78,11 @@ class _SignupWrapperState extends State<SignupWrapper> {
                       children: [
                         Text("Already have an account?", style: Theme.of(context).textTheme.displaySmall),
                         SizedBox(width: 10.w),
-                        SvgPicture.asset(context.locale.languageCode == "en" ? "assets/svg/arrow-right.svg" : "assets/svg/arrow-left.svg", color: Theme.of(context).colorScheme.primary)
+                        SvgPicture.asset(
+                          context.locale.languageCode == "en" ? "assets/svg/arrow-right.svg" : "assets/svg/arrow-left.svg",
+                          color: Theme.of(context).colorScheme.primary,
+                          height: 20.sp, width: 20.sp,
+                        )
                       ],
                     ),
                   ),
@@ -89,7 +100,52 @@ class _SignupWrapperState extends State<SignupWrapper> {
         
               // Page Footer -- S t a r t --
               Expanded(
-                child: Container(color: Colors.transparent)
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    // Social Auth -- S t a r t --
+                    Text(
+                      "Or sign up with social account",
+                      style: Theme.of(context).textTheme.displaySmall,
+                    ),
+                
+                    SizedBox(height: 15.h),
+                
+                    SizedBox(
+                      width: width/2, height: 70.h,
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Container(
+                              height: double.infinity,
+                              padding: EdgeInsets.all(22.sp),
+                              decoration: BoxDecoration(
+                                color: Theme.of(context).colorScheme.secondary,
+                                borderRadius: BorderRadius.circular(25.sp)
+                              ),
+                              child: SvgPicture.asset("assets/svg/google_icon.svg"),
+                            ),
+                          ),
+                          SizedBox(width: 15.w),
+                          Expanded(
+                            child: Container(
+                              height: double.infinity,
+                              padding: EdgeInsets.all(22.sp),
+                              decoration: BoxDecoration(
+                                color: Theme.of(context).colorScheme.secondary,
+                                borderRadius: BorderRadius.circular(25.sp)
+                              ),
+                              child: SvgPicture.asset("assets/svg/facebook_icon.svg"),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    // Social Auth -- E n d --
+                
+                    SizedBox(height: 30.h),
+                  ],
+                )
               ),
               // Page Footer -- E n d --
         

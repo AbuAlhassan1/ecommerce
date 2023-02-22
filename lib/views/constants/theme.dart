@@ -41,6 +41,7 @@ class Themes {
     scaffoldBackgroundColor: LightThemeColors.background,
     colorScheme: ColorScheme.light(
       primary: LightThemeColors.primary,
+      primaryContainer: LightThemeColors.white,
       secondary: LightThemeColors.white,
       error: LightThemeColors.error,
       background: LightThemeColors.background,
@@ -86,7 +87,8 @@ class Themes {
     ),
     colorScheme: ColorScheme.light(
       primary: DarkThemeColors.primary,
-      secondary: DarkThemeColors.dark,
+      primaryContainer: DarkThemeColors.dark,
+      secondary: DarkThemeColors.white,
       error: DarkThemeColors.error,
       background: DarkThemeColors.background,
       brightness: Brightness.dark

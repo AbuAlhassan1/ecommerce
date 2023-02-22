@@ -1,5 +1,4 @@
 import 'package:ecommerce/views/constants/constraints.dart';
-import 'package:ecommerce/views/common_widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -24,7 +23,7 @@ class _TextFieldWithLableState extends State<TextFieldWithLable> {
       padding: EdgeInsets.symmetric(horizontal: Constraints.horizontalPagePadding),
       margin: EdgeInsets.only(bottom: 10.h),
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.secondary,
+        color: Theme.of(context).colorScheme.primaryContainer,
         borderRadius: BorderRadius.circular(Constraints.mainTextFieldRadius)
       ),
       child: TextField(

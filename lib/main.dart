@@ -1,11 +1,7 @@
 import 'dart:developer';
-
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:ecommerce/views/constants/colors.dart';
-import 'package:ecommerce/translations/locale_keys.g.dart';
 import 'package:ecommerce/views/auth/signup.dart';
-import 'package:ecommerce/views/common_widgets/custom_text.dart';
 import 'package:ecommerce/views/constants/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
