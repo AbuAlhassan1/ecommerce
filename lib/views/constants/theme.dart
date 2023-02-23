@@ -8,22 +8,22 @@ class Themes {
     textTheme: TextTheme(
       displayMedium: CustomText.createCustomTajawalTextStyle(
         fontSize: 22,
-        color: DarkThemeColors.white,
+        color: LightThemeColors.black,
         weight: FontWeight.bold
       ),
       displaySmall: CustomText.createCustomTajawalTextStyle(
         fontSize: 20,
-        color: DarkThemeColors.white,
+        color: LightThemeColors.black,
       ),
       headlineMedium: CustomText.createCustomTajawalTextStyle(
         fontSize: 24,
         weight: FontWeight.bold,
-        color: DarkThemeColors.white
+        color: LightThemeColors.black,
       ),
       headlineLarge: CustomText.createCustomTajawalTextStyle(
-        fontSize: 36,
+        fontSize: 40,
         weight: FontWeight.bold,
-        color: DarkThemeColors.white
+        color: LightThemeColors.black,
       ),
       labelLarge: CustomText.createCustomTajawalTextStyle(
         fontSize: 18,

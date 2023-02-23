@@ -1,20 +1,20 @@
+import 'package:flutter/material.dart';
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:ecommerce/views/constants/constraints.dart';
 import 'package:ecommerce/views/common_widgets/rounded_button.dart';
 import 'package:ecommerce/views/common_widgets/textfield_with_lable.dart';
-import 'package:ecommerce/views/constants/constraints.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class Signup extends StatefulWidget {
-  const Signup({super.key});
+class Login extends StatefulWidget {
+  const Login({super.key});
 
   @override
-  State<Signup> createState() => _SignupState();
+  State<Login> createState() => _LoginState();
 }
 
-class _SignupState extends State<Signup> {
+class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
 
@@ -47,7 +47,7 @@ class _SignupState extends State<Signup> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Sign up", style: Theme.of(context).textTheme.headlineLarge)
+                      Text("Login", style: Theme.of(context).textTheme.headlineLarge)
                     ],
                   ),
                 )
@@ -58,9 +58,6 @@ class _SignupState extends State<Signup> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  // Name TextField -- S t a r t --
-                  const TextFieldWithLable(lable: "Name"),
-                  // Name TextField -- E n d --
               
                   // Email TextField -- S t a r t --
                   const TextFieldWithLable(lable: "Email"),
@@ -76,7 +73,7 @@ class _SignupState extends State<Signup> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text("Already have an account?", style: Theme.of(context).textTheme.displaySmall),
+                        Text("Forgot your password?", style: Theme.of(context).textTheme.displaySmall),
                         SizedBox(width: 10.w),
                         SvgPicture.asset(
                           context.locale.languageCode == "en" ? "assets/svg/arrow-right.svg" : "assets/svg/arrow-left.svg",
@@ -91,7 +88,7 @@ class _SignupState extends State<Signup> {
                   // Signup Button -- S t a r t --
                   RoundedButton(
                     color: Theme.of(context).colorScheme.primary,
-                    text: "Sign up",
+                    text: "Login",
                   ),
                   // Signup Button -- E n d --
                 ],
@@ -105,7 +102,7 @@ class _SignupState extends State<Signup> {
                   children: [
                     // Social Auth -- S t a r t --
                     Text(
-                      "Or sign up with social account",
+                      "Or login with social account",
                       style: Theme.of(context).textTheme.displaySmall,
                     ),
                 

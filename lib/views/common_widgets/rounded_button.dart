@@ -1,3 +1,4 @@
+import 'package:ecommerce/views/common_widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,8 +13,14 @@ class RoundedButton extends StatefulWidget {
 class _RoundedButtonState extends State<RoundedButton> {
   @override
   Widget build(BuildContext context) {
+
+    // Variables -- S t a r t --
+    double height = MediaQuery.of(context).size.height;
+    // double width = MediaQuery.of(context).size.width;
+    // Variables -- E n d --
+
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 15.h),
+      padding: EdgeInsets.symmetric(vertical: 13.h),
       decoration: BoxDecoration(
         color: widget.color,
         borderRadius: BorderRadius.circular(100.sp),
@@ -27,7 +34,16 @@ class _RoundedButtonState extends State<RoundedButton> {
         ]
       ),
       child: Center(
-        child: Text(widget.text, style: Theme.of(context).textTheme.displayMedium,),
+        child: Padding(
+          padding: EdgeInsets.only(top: 3.h),
+          child: CustomText.createCustomTajawalText(
+            text: widget.text,
+            color: Theme.of(context).colorScheme.secondary,
+            fontSize: 18,
+            screenHeight: height,
+            weight: FontWeight.bold
+          ),
+        ),
       ),
     );
   }

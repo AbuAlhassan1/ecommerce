@@ -24,7 +24,15 @@ class _TextFieldWithLableState extends State<TextFieldWithLable> {
       margin: EdgeInsets.only(bottom: 10.h),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.primaryContainer,
-        borderRadius: BorderRadius.circular(Constraints.mainTextFieldRadius)
+        borderRadius: BorderRadius.circular(Constraints.mainTextFieldRadius),
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.black,
+            blurRadius: 8,
+            spreadRadius: -10,
+            offset: Offset(0, 0.5)
+          )
+        ]
       ),
       child: TextField(
         style: Theme.of(context).textTheme.displayMedium,
