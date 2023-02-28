@@ -20,21 +20,33 @@ class Themes {
       bodySmall: CustomText.createCustomTajawalTextStyle(fontSize: 30),
       // Paragraphes And Descriptions -- E n d --
 
-      displayLarge: CustomText.createCustomTajawalTextStyle(fontSize: 28),
-      displayMedium: CustomText.createCustomTajawalTextStyle(fontSize: 22),
-      displaySmall: CustomText.createCustomTajawalTextStyle(fontSize: 18),
+      displayLarge: CustomText.createCustomTajawalTextStyle(
+        fontSize: 28,
+        color: app.Colors.offBlack
+      ),
+      displayMedium: CustomText.createCustomTajawalTextStyle(
+        fontSize: 22,
+        color: app.Colors.offBlack
+      ),
+      displaySmall: CustomText.createCustomTajawalTextStyle(
+        fontSize: 18,
+        color: app.Colors.offBlack
+      ),
 
       headlineLarge: CustomText.createCustomTajawalTextStyle(
         fontSize: 28,
-        weight: FontWeight.bold
+        weight: FontWeight.bold,
+        color: app.Colors.offBlack
       ),
       headlineMedium: CustomText.createCustomTajawalTextStyle(
         fontSize: 24,
-        weight: FontWeight.bold
+        weight: FontWeight.bold,
+        color: app.Colors.offBlack
       ),
       headlineSmall: CustomText.createCustomTajawalTextStyle(
         fontSize: 18,
-        weight: FontWeight.bold
+        weight: FontWeight.bold,
+        color: app.Colors.offBlack
       ),
 
       labelLarge: CustomText.createCustomTajawalTextStyle(fontSize: 30),
@@ -64,21 +76,33 @@ class Themes {
       bodySmall: CustomText.createCustomTajawalTextStyle(fontSize: 30),
       // Paragraphes And Descriptions -- E n d --
 
-      displayLarge: CustomText.createCustomTajawalTextStyle(fontSize: 28),
-      displayMedium: CustomText.createCustomTajawalTextStyle(fontSize: 22),
-      displaySmall: CustomText.createCustomTajawalTextStyle(fontSize: 18),
+      displayLarge: CustomText.createCustomTajawalTextStyle(
+        fontSize: 28,
+        color: app.Colors.white
+      ),
+      displayMedium: CustomText.createCustomTajawalTextStyle(
+        fontSize: 22,
+        color: app.Colors.white
+      ),
+      displaySmall: CustomText.createCustomTajawalTextStyle(
+        fontSize: 18,
+        color: app.Colors.white
+      ),
 
       headlineLarge: CustomText.createCustomTajawalTextStyle(
         fontSize: 28,
-        weight: FontWeight.bold
+        weight: FontWeight.bold,
+        color: app.Colors.white
       ),
       headlineMedium: CustomText.createCustomTajawalTextStyle(
         fontSize: 24,
-        weight: FontWeight.bold
+        weight: FontWeight.bold,
+        color: app.Colors.white
       ),
       headlineSmall: CustomText.createCustomTajawalTextStyle(
         fontSize: 18,
-        weight: FontWeight.bold
+        weight: FontWeight.bold,
+        color: app.Colors.white
       ),
 
       labelLarge: CustomText.createCustomTajawalTextStyle(fontSize: 30),
