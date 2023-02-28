@@ -2,10 +2,10 @@ import 'dart:developer';
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommerce/views/constants/theme.dart';
+import 'package:ecommerce/views/welcome/welcome_pages_wrapper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:ecommerce/views/auth/register_wrapper.dart';
 
 // Use This Command To Generate Transitions
 // flutter pub run easy_localization:generate -S "assets/translations" -O "lib/translations" -o "locale_keys.g.dart" -f keys
@@ -22,8 +22,8 @@ void main() async {
         Locale('en', ''),
       ],
       path: 'assets/translations',
-      fallbackLocale: const Locale('en', ''),
-      startLocale: const Locale('en', ''),
+      fallbackLocale: const Locale('ar', ''),
+      startLocale: const Locale('ar', ''),
       child: MyApp(),
     )
   );
@@ -33,13 +33,20 @@ class MyApp extends StatelessWidget {
   MyApp({super.key});
 
   final router = GoRouter(
-    initialLocation: '/signup',
+    initialLocation: '/welcome',
     routes: [
+      GoRoute(
+        path: '/welcome',
+        pageBuilder: (context, state) => MaterialPage(
+          key: state.pageKey,
+          child: const WelcomePagesWrapper()
+        ),
+      ),
       GoRoute(
         path: '/signup',
         pageBuilder: (context, state) => MaterialPage(
           key: state.pageKey,
-          child: const RegisterWrapper()
+          child: const Scaffold()
         ),
       ),
     ],
@@ -54,7 +61,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    context.setLocale(const Locale('en'));
     return ScreenUtilInit(
       designSize: const Size(400, 860),
       minTextAdapt: true,
@@ -72,7 +78,7 @@ class MyApp extends StatelessWidget {
           locale: context.locale,
           routerConfig: router,
         ),
-      )
+      ),
     );
   }
 }

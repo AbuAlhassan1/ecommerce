@@ -66,6 +66,24 @@ class CustomText {
     );
   }
 
+  static Text createCustomText(
+    {
+      required String text,
+      required TextStyle style,
+      TextAlign align = TextAlign.start,
+      int? maxLines,
+    }
+  ){
+    final maxL = maxLines ?? 1;
+    return Text(
+      text,
+      textAlign: align,
+      maxLines: maxL,
+      textScaleFactor: 1,
+      style: style,
+    );
+  }
+
   static TextStyle createCustomTajawalTextStyle(
     {
       required double fontSize,

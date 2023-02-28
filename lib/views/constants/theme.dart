@@ -1,97 +1,93 @@
 import 'package:ecommerce/views/common_widgets/custom_text.dart';
-import 'package:ecommerce/views/constants/colors.dart';
+import 'package:ecommerce/views/constants/colors.dart' as app;
 import 'package:flutter/material.dart';
 
 class Themes {
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
+    scaffoldBackgroundColor: app.Colors.white,
+    colorScheme: ColorScheme.light(
+      primary: app.Colors.mainBlue,
+      secondary: app.Colors.deepBlue,
+      error: app.Colors.error,
+      background: app.Colors.white,
+      brightness: Brightness.light,
+    ),
     textTheme: TextTheme(
-      displayMedium: CustomText.createCustomTajawalTextStyle(
-        fontSize: 22,
-        color: LightThemeColors.black,
+      // Paragraphes And Descriptions -- S t a r t --
+      bodyLarge: CustomText.createCustomTajawalTextStyle(fontSize: 30),
+      bodyMedium: CustomText.createCustomTajawalTextStyle(fontSize: 30),
+      bodySmall: CustomText.createCustomTajawalTextStyle(fontSize: 30),
+      // Paragraphes And Descriptions -- E n d --
+
+      displayLarge: CustomText.createCustomTajawalTextStyle(fontSize: 28),
+      displayMedium: CustomText.createCustomTajawalTextStyle(fontSize: 22),
+      displaySmall: CustomText.createCustomTajawalTextStyle(fontSize: 18),
+
+      headlineLarge: CustomText.createCustomTajawalTextStyle(
+        fontSize: 28,
         weight: FontWeight.bold
-      ),
-      displaySmall: CustomText.createCustomTajawalTextStyle(
-        fontSize: 20,
-        color: LightThemeColors.black,
       ),
       headlineMedium: CustomText.createCustomTajawalTextStyle(
         fontSize: 24,
-        weight: FontWeight.bold,
-        color: LightThemeColors.black,
+        weight: FontWeight.bold
       ),
-      headlineLarge: CustomText.createCustomTajawalTextStyle(
-        fontSize: 40,
-        weight: FontWeight.bold,
-        color: LightThemeColors.black,
-      ),
-      labelLarge: CustomText.createCustomTajawalTextStyle(
+      headlineSmall: CustomText.createCustomTajawalTextStyle(
         fontSize: 18,
-        color: LightThemeColors.grey
+        weight: FontWeight.bold
       ),
-      labelMedium: CustomText.createCustomTajawalTextStyle(
-        fontSize: 18,
-        color: LightThemeColors.grey
-      ),
-      labelSmall: CustomText.createCustomTajawalTextStyle(
-        fontSize: 18,
-        color: LightThemeColors.grey
-      ),
-    ),
-    scaffoldBackgroundColor: LightThemeColors.background,
-    colorScheme: ColorScheme.light(
-      primary: LightThemeColors.primary,
-      primaryContainer: LightThemeColors.white,
-      secondary: LightThemeColors.white,
-      error: LightThemeColors.error,
-      background: LightThemeColors.background,
-      brightness: Brightness.light,
+
+      labelLarge: CustomText.createCustomTajawalTextStyle(fontSize: 30),
+      labelMedium: CustomText.createCustomTajawalTextStyle(fontSize: 30),
+      labelSmall: CustomText.createCustomTajawalTextStyle(fontSize: 30),
+
+      titleLarge: CustomText.createCustomTajawalTextStyle(fontSize: 30),
+      titleMedium: CustomText.createCustomTajawalTextStyle(fontSize: 30),
+      titleSmall: CustomText.createCustomTajawalTextStyle(fontSize: 30),
     )
   );
 
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
-    scaffoldBackgroundColor: DarkThemeColors.background,
+    scaffoldBackgroundColor: app.Colors.deepBlue,
+    colorScheme: ColorScheme.light(
+      primary: app.Colors.mainBlue,
+      secondary: app.Colors.deepBlue,
+      error: app.Colors.error,
+      background: app.Colors.deepBlue,
+      brightness: Brightness.dark
+    ),
     textTheme: TextTheme(
-      displayMedium: CustomText.createCustomTajawalTextStyle(
-        fontSize: 22,
-        color: DarkThemeColors.white,
-        weight: FontWeight.bold
-      ),
-      displaySmall: CustomText.createCustomTajawalTextStyle(
-        fontSize: 20,
-        color: DarkThemeColors.white,
-      ),
+      // Paragraphes And Descriptions -- S t a r t --
+      bodyLarge: CustomText.createCustomTajawalTextStyle(fontSize: 30),
+      bodyMedium: CustomText.createCustomTajawalTextStyle(fontSize: 30),
+      bodySmall: CustomText.createCustomTajawalTextStyle(fontSize: 30),
+      // Paragraphes And Descriptions -- E n d --
+
+      displayLarge: CustomText.createCustomTajawalTextStyle(fontSize: 28),
+      displayMedium: CustomText.createCustomTajawalTextStyle(fontSize: 22),
+      displaySmall: CustomText.createCustomTajawalTextStyle(fontSize: 18),
+
       headlineLarge: CustomText.createCustomTajawalTextStyle(
-        fontSize: 40,
-        weight: FontWeight.bold,
-        color: DarkThemeColors.white
+        fontSize: 28,
+        weight: FontWeight.bold
       ),
       headlineMedium: CustomText.createCustomTajawalTextStyle(
         fontSize: 24,
-        weight: FontWeight.bold,
-        color: DarkThemeColors.white
+        weight: FontWeight.bold
       ),
-      labelLarge: CustomText.createCustomTajawalTextStyle(
+      headlineSmall: CustomText.createCustomTajawalTextStyle(
         fontSize: 18,
-        color: DarkThemeColors.grey
+        weight: FontWeight.bold
       ),
-      labelMedium: CustomText.createCustomTajawalTextStyle(
-        fontSize: 18,
-        color: DarkThemeColors.grey
-      ),
-      labelSmall: CustomText.createCustomTajawalTextStyle(
-        fontSize: 18,
-        color: DarkThemeColors.grey
-      ),
-    ),
-    colorScheme: ColorScheme.light(
-      primary: DarkThemeColors.primary,
-      primaryContainer: DarkThemeColors.dark,
-      secondary: DarkThemeColors.white,
-      error: DarkThemeColors.error,
-      background: DarkThemeColors.background,
-      brightness: Brightness.dark
+
+      labelLarge: CustomText.createCustomTajawalTextStyle(fontSize: 30),
+      labelMedium: CustomText.createCustomTajawalTextStyle(fontSize: 30),
+      labelSmall: CustomText.createCustomTajawalTextStyle(fontSize: 30),
+
+      titleLarge: CustomText.createCustomTajawalTextStyle(fontSize: 30),
+      titleMedium: CustomText.createCustomTajawalTextStyle(fontSize: 30),
+      titleSmall: CustomText.createCustomTajawalTextStyle(fontSize: 30),
     )
   );
 }
