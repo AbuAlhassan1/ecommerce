@@ -5,6 +5,7 @@ import 'package:ecommerce/views/special_widgets/onboarding_skip_button.dart';
 import 'package:ecommerce/views/welcome/many_stores_many_options.dart';
 import 'package:ecommerce/views/welcome/more_availability_more_fun.dart';
 import 'package:ecommerce/views/welcome/paradise_your_first_choice.dart';
+import 'package:ecommerce/views/welcome/skip_or_login.dart';
 import 'package:ecommerce/views/welcome/you_shop_we_deliver.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +29,6 @@ class _WelcomePagesWrapperState extends State<WelcomePagesWrapper> {
         setState(() {
           indexIndicatorPosition = controller.page! - 3;
           indexIndicatorOpacity = 1 - (controller.page! - 3);
-          log((1 - (controller.page! - 3)).toString());
         });
       }
     });
@@ -62,7 +62,7 @@ class _WelcomePagesWrapperState extends State<WelcomePagesWrapper> {
                 ManyStoresManyOptions(),
                 MoreAvailabilityMoreFun(),
                 YouShopWeDeliver(),
-                Scaffold()
+                SkipOrLogin()
               ],
             ),
             // Main Content -- E n d --

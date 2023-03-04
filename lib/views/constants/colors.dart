@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Colors {
+class ParadiseColors {
   static Color error = const Color(0xfff01f0e);
   static Color success = const Color(0xff2aa952);
   static Color grey = const Color(0xff9b9b9b);

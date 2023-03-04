@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:ecommerce/views/auth/login.dart';
 import 'package:ecommerce/views/constants/theme.dart';
 import 'package:ecommerce/views/welcome/welcome_pages_wrapper.dart';
 import 'package:flutter/material.dart';
@@ -41,13 +42,22 @@ class MyApp extends StatelessWidget {
           key: state.pageKey,
           child: const WelcomePagesWrapper()
         ),
-      ),
-      GoRoute(
-        path: '/signup',
-        pageBuilder: (context, state) => MaterialPage(
-          key: state.pageKey,
-          child: const Scaffold()
-        ),
+        routes: [
+          GoRoute(
+            path: 'login',
+            pageBuilder: (context, state) => MaterialPage(
+              key: state.pageKey,
+              child: const Login()
+            ),
+          ),
+          GoRoute(
+            path: 'signup',
+            pageBuilder: (context, state) => MaterialPage(
+              key: state.pageKey,
+              child: const Scaffold()
+            ),
+          ),
+        ]
       ),
     ],
     errorPageBuilder: (context, state) => MaterialPage(

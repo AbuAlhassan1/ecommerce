@@ -52,7 +52,7 @@ class IindeIindicatorState extends State<IndexIndicator> {
               height: widget.size.sp, width: widget.size.sp,
               margin: EdgeInsets.symmetric(horizontal: 5.w),
               decoration: BoxDecoration(
-                color: i == index ? Theme.of(context).colorScheme.primary : app.Colors.offBlue,
+                color: i == index ? Theme.of(context).colorScheme.primary : app.ParadiseColors.offBlue,
                 borderRadius: BorderRadius.circular(widget.size * 2)
               ),
             )
